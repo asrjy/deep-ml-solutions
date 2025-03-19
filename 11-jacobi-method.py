@@ -1,5 +1,3 @@
-import numpy as np
-
 def get_x1(A, x_2, x_3, b):
 	return (b[0] - (A[0][1] * x_2) - (A[0][2] * x_3)) * (1/A[0][0])
 
