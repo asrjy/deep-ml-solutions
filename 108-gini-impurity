@@ -1,0 +1,17 @@
+def disorder(apples: list) -> float:
+    probs = {}
+    n = len(apples)
+    for i in apples:
+        if i in probs.keys():
+            probs[i] += 1
+        else:
+            probs[i] = 1
+    for i in probs.keys():
+        probs[i] /= n
+    
+    gini_impurity = 1
+
+    for i in probs.keys():
+        gini_impurity -= (probs[i])**2
+    
+    return gini_impurity
